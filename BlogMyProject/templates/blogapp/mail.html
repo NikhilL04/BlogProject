@@ -1,0 +1,26 @@
+{%extends 'blogapp/test.html'%}
+{%block title_block%}
+{%block content%}
+{%if sent%}
+<center>
+<div class="alert alert-success" role="alert"><h1>Email sent successfully.</h1></div>
+<h3>{{post.title}}'s post sent by Email</h3>
+{%else%}
+<center>
+<h3>Share {{post.title}}'s post sending by Email</h3>
+
+
+<form method="post">
+  {{form.as_p}}
+  {%csrf_token%}
+
+  <input type="submit" value="Send Mail" class="btn btn-primary">
+
+</form>
+<br>
+
+<a href="/list">GO Back..</a>
+{%endif%}
+{%endblock%}
+
+{%endblock%}

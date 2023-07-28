@@ -1,0 +1,28 @@
+
+{%extends 'blogapp/test.html'%}
+{%load static%}
+{%block title_block%}
+
+{%block content%}
+<link rel="stylesheet" href="{%static 'CSS/blog.css'%}">
+<script src="{% static 'JAVASCRIPT/login.js' %}"></script>
+<center>
+
+<h1>EarlyPost Blog's</h1>
+<h2>login to Checkout Posts</h2>
+{%if csubmit%}
+<h1>Login Done Successfully!!!</h1>
+<a href="/list" target="_blank" class="btn btn-success ">Check Out Recent Blog's Here</a>
+{%else%}
+<form name="frm" method="post" onsubmit="return validate_Password()">
+  <table>
+   {{ form.as_table }}
+   {%csrf_token%}
+</table>
+<br>
+  <input type="submit" class="btn btn-primary" value="Login">
+  </form>
+{%endif%}
+
+{%endblock%}
+{%endblock%}

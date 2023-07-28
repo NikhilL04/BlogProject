@@ -1,0 +1,43 @@
+
+h1{
+  text-align:center;
+  border-bottom: 1px solid green;
+  padding-bottom: 10px;
+}
+#date{
+  color:cyan;
+  font-size:19px;
+  font-style: italic;
+}
+#db{
+color:blue;
+font-style: italic;
+font-size: 30px;
+border-bottom: 2px solid red;
+
+}
+#mg {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+h2{
+  font-size:19px;
+}
+
+
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+#pcount{
+  font-size: 40px;
+  color: blue;
+  font-weight: bold;
+}

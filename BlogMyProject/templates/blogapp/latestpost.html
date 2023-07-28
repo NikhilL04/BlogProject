@@ -1,0 +1,14 @@
+{%extends 'blogapp/test.html'%}
+{%load static%}
+{%load customtags%}
+{%block title_block%}
+
+{%block content%}
+<ul>
+  {%for i in latestpost%}
+  <li><a href="{{i.get_absolute_url}}">{{i.title}}</a></li>
+  {%endfor%}
+</ul>
+{%endblock%}
+
+{%endblock%}
